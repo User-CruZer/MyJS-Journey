@@ -48,4 +48,4 @@ btnRoll.addEventListener("click", function() {
         player0El.classList.toggle("player--active");
         player1El.classList.toggle("player--active");
     }
-})
+});
