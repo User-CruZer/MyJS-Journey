@@ -80,3 +80,13 @@ btnHold.addEventListener("click", function() {
     }
 
 });
+
+btnNew.addEventListener("click", function() {
+    playing = true;
+    scores = [0, 0];
+    
+    document.getElementById("score--0").textContent = 0;
+    document.getElementById("score--1").textContent = 0;
+    score0El = 0;
+    score1El = 0;
+})
