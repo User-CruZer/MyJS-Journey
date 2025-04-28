@@ -15,7 +15,7 @@ const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 
-const scores = [0, 0];
+let scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
@@ -82,11 +82,19 @@ btnHold.addEventListener("click", function() {
 });
 
 btnNew.addEventListener("click", function() {
+    console.log("new game button pressed")
     playing = true;
-    scores = [0, 0];
+    scores = [0,0];
+    currentScore = 0;
+    activePlayer = 0;
     
-    document.getElementById("score--0").textContent = 0;
-    document.getElementById("score--1").textContent = 0;
-    score0El = 0;
-    score1El = 0;
-})
+    diceEl.classList.add("hidden");
+    player0El.classList.add("player--active");
+    player1El.classList.remove("player--active");
+    document.getElementById("current--0").textContent = 0;
+    document.getElementById("current--1").textContent = 0;
+    document.getElementById("score--0").textContent = currentScore;
+    document.getElementById("score--1").textContent = currentScore;
+    document.querySelector(".player--0").classList.remove("player--winner");
+    document.querySelector(".player--1").classList.remove("player--winner");
+});
