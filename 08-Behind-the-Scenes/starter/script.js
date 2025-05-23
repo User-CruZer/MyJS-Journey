@@ -1,5 +1,7 @@
 'use strict';
 
+
+// Scoping
 function calcAge(birthyear) {
     const age = 2037 - birthyear;
     
